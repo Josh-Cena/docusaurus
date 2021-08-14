@@ -55,7 +55,7 @@ When you `init` your Docusaurus 2 project, the website will be generated with ba
 
 Infima uses 7 shades of each color. We recommend using [ColorBox](https://www.colorbox.io/) to find the different shades of colors for your chosen primary color.
 
-Alternatively, use the following tool to generate the different shades for your website and copy the variables into `/src/css/custom.css`.
+Alternatively, use the following tool to generate the different shades for your website and copy the variables into `/src/css/custom.css`. Input any color, and see it in action on this website.
 
 <ColorGenerator/>
 

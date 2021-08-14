@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Color from 'color';
 import CodeBlock from '@theme/CodeBlock';
 
@@ -64,7 +64,7 @@ const COLOR_SHADES: Record<
   },
 };
 
-const DEFAULT_PRIMARY_COLOR = '3578e5';
+const DEFAULT_PRIMARY_COLOR = '25c2a0';
 
 function ColorGenerator() {
   const [baseColor, setBaseColor] = useState(DEFAULT_PRIMARY_COLOR);
@@ -79,6 +79,13 @@ function ColorGenerator() {
       ...value,
       hex: color.darken(value.adjustment).hex(),
     }));
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--ifm-color-primary',
+      `#${baseColor}`,
+    );
+  }, [baseColor]);
 
   return (
     <div>
