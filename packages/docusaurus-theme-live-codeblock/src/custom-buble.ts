@@ -8,14 +8,22 @@
 // fork of Buble which removes Buble's large dependency and weighs in
 // at a smaller size of ~51kB
 // https://github.com/FormidableLabs/react-live#what-bundle-size-can-i-expect
-const {transform, features: bubleFeatures} = require('@philpl/buble');
+import {
+  transform,
+  TransformOptions,
+  TransformOutput,
+  features,
+} from '@philpl/buble';
 
 // This file is designed to mimic what's written in
 // https://github.com/kitten/buble/blob/mini/src/index.js, with custom transforms options,
 // so that webpack can consume it correctly.
-exports.features = bubleFeatures;
+export {features};
 
-exports.transform = function customTransform(source, options) {
+export function customTransform(
+  source: string,
+  options: TransformOptions,
+): TransformOutput {
   return transform(source, {
     ...options,
     transforms: {
@@ -25,4 +33,4 @@ exports.transform = function customTransform(source, options) {
       ...options.transforms,
     },
   });
-};
+}

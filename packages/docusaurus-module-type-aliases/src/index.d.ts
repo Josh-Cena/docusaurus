@@ -101,6 +101,8 @@ declare module '@theme/Root' {
   export default function Root({children}: Props): JSX.Element;
 }
 
+declare module '@theme-init/*';
+
 declare module '@docusaurus/constants' {
   export const DEFAULT_PLUGIN_ID: 'default';
 }

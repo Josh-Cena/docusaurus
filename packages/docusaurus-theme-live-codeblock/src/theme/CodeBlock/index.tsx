@@ -5,18 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, {ComponentType} from 'react';
 import Playground from '@theme/Playground';
 import ReactLiveScope from '@theme/ReactLiveScope';
 import CodeBlock from '@theme-init/CodeBlock';
+import type {Props} from '@theme/CodeBlock';
 
-const withLiveEditor = (Component) => {
-  const WrappedComponent = (props) => {
-    if (props.live) {
-      return <Playground scope={ReactLiveScope} {...props} />;
-    }
-
-    return <Component {...props} />;
+const withLiveEditor = (Component: ComponentType<Props>) => {
+  const WrappedComponent = (props: {live?: boolean} & Props) => {
+    return props.live ? (
+      <Playground scope={ReactLiveScope} {...props} />
+    ) : (
+      <Component {...props} />
+    );
   };
 
   return WrappedComponent;
