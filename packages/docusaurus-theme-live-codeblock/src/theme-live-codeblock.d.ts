@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/// <reference types="@docusaurus/theme-classic" />
 /// <reference types="@docusaurus/module-type-aliases" />
 
 declare module '@philpl/buble' {
-  // eslint-disable-next-line import/no-unresolved
   import type {
     TransformOptions as OriginalOptions,
     TransformOutput,
-  } from '@types/buble';
+  } from 'buble';
 
   // The only option that's not typed :/
   export interface TransformOptions extends OriginalOptions {
@@ -27,15 +27,17 @@ declare module '@philpl/buble' {
 }
 
 declare module '@theme/Playground' {
-  // import type {Component, LegacyRef} from 'react';
-  import type {LiveProviderProps} from 'react-live';
-  import type {Props as CodeBlockProps} from '@theme/CodeBlock';
+  import type {RefObject} from 'react';
+  import type {LiveProvider, LiveProviderProps} from 'react-live';
 
   export interface Props extends LiveProviderProps {
-    children?: CodeBlockProps['children'];
+    // Seems a bit hacky, but
+    // (props: LiveProviderProps) => <LiveProvider {...props} />
+    // doesn't work because ref is contravariant
+    ref: RefObject<LiveProvider>;
   }
 
-  export default function Playground(props: Props): JSX.Element;
+  export default function Playground(props: LiveProviderProps): JSX.Element;
 }
 
 declare module '@theme-init/CodeBlock' {

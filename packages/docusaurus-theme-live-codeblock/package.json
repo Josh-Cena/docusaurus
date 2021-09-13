@@ -3,6 +3,7 @@
   "version": "2.0.0-beta.8",
   "description": "Docusaurus live code block component.",
   "main": "lib/index.js",
+  "types": "src/theme-live-codeblock.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -13,8 +14,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc && ./copyUntypedFiles.js",
-    "watch": "./copyUntypedFiles.js && tsc --watch"
+    "build": "tsc && node ./copyUntypedFiles.js",
+    "watch": "node ./copyUntypedFiles.js && tsc --watch"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.8",
