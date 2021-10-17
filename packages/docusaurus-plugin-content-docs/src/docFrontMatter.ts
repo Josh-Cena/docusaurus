@@ -36,6 +36,10 @@ const DocFrontMatterSchema = Joi.object<DocFrontMatter>({
   parse_number_prefixes: Joi.boolean(),
   pagination_next: Joi.string().allow(null),
   pagination_prev: Joi.string().allow(null),
+  last_update_time: Joi.date().raw(),
+  last_update_author: Joi.string(),
+  create_time: Joi.date().raw(),
+  create_author: Joi.string(),
   ...FrontMatterTOCHeadingLevels,
 }).unknown();
 

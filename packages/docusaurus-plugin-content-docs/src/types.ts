@@ -129,6 +129,10 @@ export type DocFrontMatter = {
   pagination_label?: string;
   custom_edit_url?: string | null;
   parse_number_prefixes?: boolean;
+  last_update_time?: Date | string;
+  last_update_author?: string;
+  create_time?: Date | string;
+  create_author?: string;
   toc_min_heading_level?: number;
   toc_max_heading_level?: number;
   pagination_next?: string | null;
