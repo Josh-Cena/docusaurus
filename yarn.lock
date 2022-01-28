@@ -3842,10 +3842,10 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/history@*":
-  version "4.7.10"
-  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.10.tgz#992865313bb97d80eefa6aab5f2e4f1e10e84e86"
-  integrity sha512-kq1vceWANyZLEt/+hbTWSAjLNhhXYgUw6Ywi0KQ9C7pZJP4Qrr0xjSKb3t59e5GwWtk1L6zt5KTxjH4oPk2l/w==
+"@types/history@*", "@types/history@^4.7.11":
+  version "4.7.11"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
+  integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
 
 "@types/html-minifier-terser@^6.0.0":
   version "6.1.0"
@@ -4118,11 +4118,11 @@
     "@types/react" "*"
 
 "@types/react-router-config@*", "@types/react-router-config@^5.0.1":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@types/react-router-config/-/react-router-config-5.0.5.tgz#1a8a7a11ef5c5466b74d86f916aa41ff9bf2cf07"
-  integrity sha512-1HEbzmY6FQudAbvYuTdEFuadUkpXcjAIcCiuKSCG6j21tIaquxEbwqoWdxWjVkkgjP2p5OllF4eKvYV1plSbMQ==
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-router-config/-/react-router-config-5.0.6.tgz#87c5c57e72d241db900d9734512c50ccec062451"
+  integrity sha512-db1mx37a1EJDf1XeX8jJN7R3PZABmJQXR8r28yUjVMFSjkmnQo6X6pOEEmNl+Tp2gYQOGPdYbFIipBtdElZ3Yg==
   dependencies:
-    "@types/history" "*"
+    "@types/history" "^4.7.11"
     "@types/react" "*"
     "@types/react-router" "*"
 
