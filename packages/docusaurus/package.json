@@ -53,7 +53,7 @@
     "autoprefixer": "^10.3.5",
     "babel-loader": "^8.2.2",
     "babel-plugin-dynamic-import-node": "2.3.0",
-    "boxen": "^5.0.1",
+    "boxen": "^6.2.1",
     "chokidar": "^3.5.2",
     "clean-css": "^5.1.5",
     "commander": "^5.1.0",
