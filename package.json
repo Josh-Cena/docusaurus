@@ -95,7 +95,7 @@
     "eslint-plugin-regexp": "^1.7.0",
     "husky": "^7.0.4",
     "image-size": "^1.0.1",
-    "jest": "^27.5.1",
+    "jest": "^28.0.3",
     "jest-serializer-react-helmet-async": "^1.0.21",
     "lerna": "^4.0.0",
     "lerna-changelog": "^2.2.0",
