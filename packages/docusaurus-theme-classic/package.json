@@ -39,7 +39,7 @@
     "postcss": "^8.4.13",
     "prism-react-renderer": "^1.3.3",
     "prismjs": "^1.28.0",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.3.0",
     "rtlcss": "^3.5.0"
   },
   "devDependencies": {
